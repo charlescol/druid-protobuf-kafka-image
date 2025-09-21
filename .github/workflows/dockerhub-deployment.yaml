@@ -21,7 +21,7 @@ jobs:
         id: extract_tag_version
         run: |
           echo "Tag is $GITHUB_REF"
-          TAG_VERSION=$(echo "${GITHUB_REF##*/}" | sed 's/v//')
+          TAG_VERSION=$(echo "${GITHUB_REF##*/}")
           echo "TAG_VERSION=$TAG_VERSION" >> $GITHUB_ENV
 
       # Start pipeline
